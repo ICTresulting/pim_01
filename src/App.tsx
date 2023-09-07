@@ -2,6 +2,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import "../src/App.css";
 import ArticleGrid from "./components/ArticleGrid";
+import ArticleBox from "./components/ArticleBox";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <GridItem area="aside">Aside</GridItem>
         </Show>
         <GridItem area="main">
+          {/* <ArticleBox/> */}
           <ArticleGrid />
         </GridItem>
       </Grid>
