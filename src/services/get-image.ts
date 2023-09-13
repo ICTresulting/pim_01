@@ -1,5 +1,5 @@
-export const getImage = (ean: string | string) => {
-  let img = "/src/assets/articles/" + ean + ".jpg";
+export const getImage = (dir: string | string, code: string | string) => {
+  let img = "/src/assets/" + dir + "/" + code + ".jpg";
   // if (img === "") {
   //   img = "/src/assets/articles/4000810115013.jpg";
   // }
