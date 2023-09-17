@@ -15,7 +15,6 @@ interface Props {
 
 const BrickList = ({ selectedBrick, onSelectBrick }: Props) => {
   const { data, isLoading, error } = useBricks();
-
   if (error) return null;
   if (isLoading) return <Spinner />;
 
