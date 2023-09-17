@@ -2,7 +2,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import "../src/App.css";
 import ArticleGrid from "./components/ArticleGrid";
-import ArticleBox from "./components/ArticleBox";
+import BrickList from "./components/BrickList";
 
 function App() {
   return (
@@ -17,10 +17,11 @@ function App() {
           <NavBar />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside">Aside</GridItem>
+          <GridItem area="aside">
+            <BrickList />
+          </GridItem>
         </Show>
         <GridItem area="main">
-          {/* <ArticleBox/> */}
           <ArticleGrid />
         </GridItem>
       </Grid>

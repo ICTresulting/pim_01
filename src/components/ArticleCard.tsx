@@ -8,7 +8,7 @@ interface props {
 }
 
 const ArticleCard = ({ article }: props) => {
-  const img = getImage(article.code);
+  const img = getImage("articles", article.code);
 
   return (
     <Card width="300px" borderRadius={10} overflow={"hidden"}>
@@ -18,7 +18,7 @@ const ArticleCard = ({ article }: props) => {
           <Heading fontSize="xl">{article.code}</Heading>
           <ArticleStock vrd={article.vrd} />
         </HStack>
-        <Box>
+        <Box padding={1}>
           <Heading fontSize="xs">{article.description} </Heading>
           <HStack>
             <Heading fontSize="sm">{article.gpc}</Heading>

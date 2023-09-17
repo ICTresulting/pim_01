@@ -18,6 +18,7 @@ const useArticles = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [error_art, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -26,6 +27,7 @@ const useArticles = () => {
       .get<FetchArticlesResponce>("/articles", { signal: controller.signal })
       .then((res) => {
         setArticles(res.data.articles);
+        setCounter(res.data.count);
         setLoading(false);
       })
       .catch((err) => {
@@ -37,7 +39,7 @@ const useArticles = () => {
     return () => controller.abort();
   }, []);
 
-  return { articles, error_art, isLoading };
+  return { articles, error_art, isLoading, counter };
 };
 
 export default useArticles;
