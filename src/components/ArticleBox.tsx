@@ -12,7 +12,7 @@ const ArticleBox = ({ counter }: props) => {
           justifyContent={"space-between"}
           bg="#afbde0"
           height="80px"
-          padding={6}
+          padding={3}
           borderRadius={6}
         >
           <Badge bgColor="#0059a2" borderRadius={6} fontSize="24px">

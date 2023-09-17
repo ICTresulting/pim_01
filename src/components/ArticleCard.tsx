@@ -11,7 +11,7 @@ const ArticleCard = ({ article }: props) => {
   const img = getImage("articles", article.code);
 
   return (
-    <Card width="300px" borderRadius={10} overflow={"hidden"}>
+    <Card>
       <Image src={img} />
       <CardBody>
         <HStack justifyContent={"space-between"}>
